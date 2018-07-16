@@ -1,43 +1,41 @@
-## React Native Redux Wix Navigation Boilerplate
+## React Native Redux Wix Navigation
 
-![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
+#### Main Dependencies
 
-* [Redux](http://redux.js.org/)
-* [Wix Navigation](https://github.com/wix/react-native-navigation) (this is the best native navigation that javascript has to offer)
-* [Styled Components](https://github.com/styled-components/styled-components)
-* [Recompose](https://github.com/acdlite/recompose)
+* [React](https://github.com/facebook/react) 16.4.1
+* [Redux](http://redux.js.org) 4.0.0
+* [Styled Components](https://github.com/styled-components/styled-components) 3.3.3
+* [Wix React Native Navigation](https://github.com/wix/react-native-navigation) 1.1.476
+* [Recompose](https://github.com/acdlite/recompose) 0.27.1
 
 #### Code Quality Tools
 
-* [eslint](https://github.com/eslint/eslint)
-* [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
-* [babel](https://github.com/babel/babel)
+* [eslint](https://github.com/eslint/eslint) 5.1.0
+* [stylelint](https://github.com/stylelint/stylelint) TODO
+* [jest](https://github.com/facebook/jest) TODO
 * [.editorconfig](http://editorconfig.org/)
 
 #### Data Flow
 
-I included only redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk) If you are more advanced programmer then you will probably want to install either [Redux-Observables](https://github.com/redux-observable/redux-observable) or [Redux-Sagas](https://github.com/redux-saga/redux-saga). Redux-Observables are the cool thing to use but working with Redux-Sagas is much easier.
+I included only redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk) If you are more advanced developer then you will probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
 
 #### Testing
 
-I intentionally did not include any testing framework so that I would reduce unnecessary boilerplate.
+TODO
 
-## Install
+## Installation
 
-You have to have `watchman` installed globally:
+Official installation guide is [here](https://facebook.github.io/react-native/docs/getting-started.html).
 
-```
-$ brew update
-$ brew install watchman
-```
+The rest of the process is not much different than for any other javascript project.
 
-Then simply install `node_modules`:
+Install `node_modules`:
 
 ```
 $ yarn install
 ```
 
-And link native libraries:
+Then link native libraries:
 
 ```bash
 $ react-native link
@@ -55,5 +53,17 @@ $ npm start
 Compile mobile application for ios:
 
 ```bash
-yarn ios
+$ yarn ios
 ```
+
+## Troubleshooting
+If any problems occur, compilation is not working, etc, try some of these points:
+
+* Project clean up: `Xcode -> Product -> Clean`
+* Run `./repair.sh` in root folder
+* Start development server yourself from command line using `yarn start`. (because of cache)
+* Make sure that your device has access to internet.
+
+## Preview
+
+![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
